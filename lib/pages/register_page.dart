@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare_brief/components/my_button.dart';
 import 'package:healthcare_brief/components/my_textfields.dart';
-import 'package:healthcare_brief/components/square_tile.dart';
-import 'package:healthcare_brief/pages/register_page.dart';
+import 'package:healthcare_brief/components/myregister_btn.dart';
+import 'package:healthcare_brief/pages/login_page.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+import '../components/square_tile.dart';
 
+class register_page extends StatefulWidget {
+  const register_page({super.key});
+
+  @override
+  State<register_page> createState() => _register_pageState();
+}
+
+class _register_pageState extends State<register_page> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -36,7 +43,7 @@ class LoginPage extends StatelessWidget {
               //welcome
 
               Text(
-                "welcome back you've been missed",
+                "let's make you registered",
                 style: TextStyle(color: Colors.grey[700], fontSize: 16),
               ),
 
@@ -54,6 +61,30 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
+              MyTextFields(
+                controller: usernameController,
+                hintext: 'email',
+                obsecureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MyTextFields(
+                controller: usernameController,
+                hintext: 'adress',
+                obsecureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              MyTextFields(
+                controller: usernameController,
+                hintext: 'phone number',
+                obsecureText: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
 
               //password
               MyTextFields(
@@ -66,26 +97,26 @@ class LoginPage extends StatelessWidget {
                 height: 20,
               ),
 
-              //forgot password
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "Forgot Password?",
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                  ],
-                ),
-              ),
+              // //forgot password
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 25),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.end,
+              //     children: [
+              //       Text(
+              //         "Forgot Password?",
+              //         style: TextStyle(color: Colors.grey[600]),
+              //       ),
+              //     ],
+              //   ),
+              // ),
 
               SizedBox(
                 height: 18,
               ),
               //sign in btn
 
-              MyButton(onTap: signinuser),
+              MyregisterButton(onTap: signinuser),
 
               SizedBox(
                 height: 30,
@@ -141,19 +172,17 @@ class LoginPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Not a member?"),
+                  Text("go back to?"),
                   SizedBox(
                     width: 5,
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => register_page()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     child: Text(
-                      "Register now ",
+                      "login now ",
                       style: TextStyle(
                           color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
