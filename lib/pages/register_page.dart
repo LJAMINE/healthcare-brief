@@ -182,7 +182,7 @@ class _register_pageState extends State<register_page> {
                           MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     child: Text(
-                      "login now ",
+                      "Login now ",
                       style: TextStyle(
                           color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
