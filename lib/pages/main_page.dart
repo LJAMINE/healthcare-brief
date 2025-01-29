@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare_brief/components/color.dart';
+import 'package:healthcare_brief/pages/doctor_schedule.dart';
 import 'package:healthcare_brief/pages/health_app_homepage.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -14,7 +15,7 @@ class _HealthappMainPageState extends State<HealthappMainPage> {
   int selectedIndex = 0;
   final List pages = [
     HealthHomepage(),
-    Scaffold(),
+    DoctorSchedule(),
     Scaffold(),
     Scaffold(),
   ];

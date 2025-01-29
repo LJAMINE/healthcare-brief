@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:healthcare_brief/models/needes_cat.dart';
 import 'package:healthcare_brief/widgets/doctor_profile.dart';
+import 'package:healthcare_brief/widgets/health_needs.dart';
+import 'package:healthcare_brief/widgets/nearby_doctors.dart';
 import 'package:iconsax/iconsax.dart';
 
 class HealthHomepage extends StatelessWidget {
@@ -66,6 +69,19 @@ class HealthHomepage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          HealthNeeds(),
+          // HealthNeeds(),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Nearby Doctors",
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          NearbyDoctors(),
         ],
       ),
     );
