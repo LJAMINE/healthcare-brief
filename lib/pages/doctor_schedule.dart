@@ -64,9 +64,9 @@ class _DoctorScheduleState extends State<DoctorSchedule> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  buildOption("Upcoming"),
-                  buildOption("Complete"),
-                  buildOption("Result"),
+                  Expanded(child: buildOption("Upcoming")),
+                  Expanded(child: buildOption("Complete")),
+                  Expanded(child: buildOption("Result")),
                 ],
               ),
             ),
